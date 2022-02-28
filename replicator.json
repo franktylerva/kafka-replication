@@ -1,0 +1,12 @@
+{
+    "name":"replicator",
+    "config":{
+            "connector.class":"io.confluent.connect.replicator.ReplicatorSourceConnector",
+            "tasks.max":4,
+            "key.converter":"io.confluent.connect.replicator.util.ByteArrayConverter",
+            "value.converter":"io.confluent.connect.replicator.util.ByteArrayConverter",
+            "src.kafka.bootstrap.servers":"torque-cloud-cp-kafka.cloud.svc.cluster.local:9092",
+            "topic.regex":"unit.*",
+            "topic.rename.format":"events"
+    }
+}
